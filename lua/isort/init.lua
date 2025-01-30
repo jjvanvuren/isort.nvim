@@ -28,7 +28,7 @@ function M.setup(opts)
 
 	vim.api.nvim_create_user_command("Isort", run_isort, {})
 
-	vim.keymap.set("n", opts.keymap, ":Isort<CR>", { noremap = true, silent = true, desc = "Sort Python imports" })
+	vim.keymap.set("n", opts.keymap, ":Isort<CR>", { noremap = true, silent = true, desc = "Sort Python Imports" })
 end
 
 return M
