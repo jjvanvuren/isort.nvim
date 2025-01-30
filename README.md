@@ -1,13 +1,13 @@
 # isort Plugin for Neovim
 
-This Neovim plugin automatically sorts Python imports using `isort`. It can be configured to sort imports on save and provides a command and keymap for manual sorting.
+This Neovim plugin automatically sorts Python imports using [isort](https://pypi.org/project/isort/).
 
 ## Installation
 First make sure `isort` is installed in your Python environment. You can install it using pip:
 ```sh
 pip install isort
 ```
-To install this plugin with LazyVim, add the following to your LazyVim configuration file (e.g., `lua/plugins/isort.lua`):
+To install this plugin with LazyVim, add the following to your LazyVim configuration (e.g., `lua/plugins/isort.lua`):
 
 ```lua
 return {
