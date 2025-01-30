@@ -7,7 +7,7 @@ First make sure `isort` is installed in your Python environment. You can install
 ```sh
 pip install isort
 ```
-To install this plugin with LazyVim, add the following to your LazyVim configuration file (e.g., `lua/plugins/init.lua`):
+To install this plugin with LazyVim, add the following to your LazyVim configuration file (e.g., `lua/plugins/isort.lua`):
 
 ```lua
 return {
