@@ -7,13 +7,14 @@ First make sure `isort` is installed in your Python environment. You can install
 ```sh
 pip install isort
 ```
-To install this plugin with LazyVim, add the following to your configuration (e.g., `lua/plugins/isort.lua`):
+To install this plugin with [lazy.nvim](https://lazy.folke.io/), add the following to your configuration (e.g., `lua/plugins/isort.lua`):
 
 ```lua
 return {
   {
     "jjvanvuren/isort.nvim",
     lazy = true,
+    event = "LazyFile",
     ft = { "python" },
     opts = {}
   },
@@ -33,6 +34,7 @@ return {
   {
     "jjvanvuren/isort.nvim",
     lazy = true,
+    event = "LazyFile",
     ft = { "python" },
     opts = { sort_on_save = false, keymap = "<leader>si" }
   },
