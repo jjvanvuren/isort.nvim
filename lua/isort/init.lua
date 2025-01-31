@@ -7,10 +7,15 @@ local function run_isort()
 
   -- If the file exists and is a Python file, run isort
   if file ~= "" and file:match("%.py$") then
-    -- Run the isort command on the file using vim.fn.system
-    vim.fn.system({ "isort", file })
-    -- Reload the buffer to see the changes
-    vim.cmd("e!")
+    -- Check if isort would make any changes
+    vim.fn.system({ "isort", "--check-only", file })
+
+    if vim.v.shell_error ~= 0 then
+      -- Run the isort command on the file using vim.fn.system
+      vim.fn.system({ "isort", file })
+      -- Reload the buffer to see the changes
+      vim.cmd("e!")
+    end
   end
 end
 
